@@ -3,7 +3,7 @@
 Code and derived data for *How many heat deaths does India record? Exposure-adjusted recording of heat-stroke deaths
 across states, 2014–2024* (Siddalingaiah H S; manuscript under review).
 
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24184628.svg)](https://doi.org/10.5281/zenodo.24184628)
 
 ## What the study does
 
