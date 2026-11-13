@@ -1041,5 +1041,26 @@
  "g2_null_exposures": [
   "wn",
   "tmin_dep"
- ]
+ ],
+ "ratio_top_bottom_post": [
+  23.82,
+  10.83,
+  50.91
+ ],
+ "ratio_year_max_min_post": [
+  2.69,
+  1.68,
+  4.28
+ ],
+ "ratio_2024_vs_min_post": [
+  2.42,
+  1.46,
+  3.91
+ ],
+ "ap_change_post": [
+  0.38,
+  0.2,
+  0.75
+ ],
+ "sigma_alpha_fold": 8.3
 }

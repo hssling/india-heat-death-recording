@@ -66,10 +66,10 @@ if (P / "data/states_2011_complete.geojson").exists():
     sm = plt.cm.ScalarMappable(cmap=DIV, norm=norm)
     cb = fig.colorbar(sm, ax=ax, orientation="horizontal", fraction=0.035, pad=0.01, ticks=[0.02, 0.1, 0.3, 1, 3, 10, 50])
     cb.ax.set_xticklabels(["0.02", "0.1", "0.3", "1", "3", "10", "50"])
-    cb.set_label("Recording index: recorded heat-stroke deaths relative to the average large state\nat the same heat exposure, population and year (log scale)", color=INK2)
+    cb.set_label(f"Recording index (log scale; 1 = geometric mean of the {len(big)} states with ≥50 deaths)", color=INK2)
     cb.outline.set_visible(False)
-    ax.text(0.0, 0.0, "Hatched: < 20 recorded deaths 2014–24 (index shrunk, wide interval). Grey: no IMD grid exposure.\n"
-            "Numbers shown for states with ≥ 50 deaths.", transform=ax.transAxes, fontsize=6.5, color=INK2, va="bottom")
+    ax.text(0.0, 0.0, "Hatched: <20 recorded deaths. Grey: no gridded exposure.\nValues shown for states with ≥50 deaths.",
+            transform=ax.transAxes, fontsize=6.5, color=INK2, va="bottom")
     save(fig, "fig1_map_recording_index")
 
 
@@ -95,7 +95,7 @@ ax.set_xscale("log")
 ax.set_xticks([0.1, 0.2, 0.5, 1, 2, 5, 10]); ax.set_xticklabels(["0.1", "0.2", "0.5", "1", "2", "5", "10"])
 ax.set_yticks(y); ax.set_yticklabels([NAME[u] for u in big.unit])
 ax.xaxis.grid(True, color=GRID, lw=0.5); ax.set_axisbelow(True)
-ax.set_xlabel("Recording index (posterior median; bar = 95% credible interval, main model)")
+ax.set_xlabel("Recording index (log scale; bar = 95% credible interval, main model)")
 ax.legend(frameon=False, fontsize=7, loc="upper left")
 for r in big.itertuples():
     ax.text(14, r.Index, f"{int(r.deaths):,}", va="center", fontsize=6.5, color=INK2)
@@ -110,14 +110,14 @@ fig, (a, b) = plt.subplots(2, 1, figsize=(6.2, 4.4), sharex=True, gridspec_kw={"
 a.bar(ppc.year, ppc.obs, width=0.7, color=CAT[0])
 for x, v in zip(ppc.year, ppc.obs):
     a.text(x, v + 30, f"{v:,}", ha="center", fontsize=6.5, color=INK2)
-a.set_ylabel("Recorded deaths\n(ADSI heat/sun-stroke)")
+a.set_ylabel("Recorded heatstroke\ndeaths")
 a.yaxis.grid(True, color=GRID, lw=0.5); a.set_axisbelow(True)
 a.text(0.0, 1.02, "a", transform=a.transAxes, fontweight="bold", fontsize=9)
 b.axhline(1, color=MUTED, lw=0.8)
 b.vlines(yr.year, yr.RR_lo, yr.RR_hi, color=CAT[1], lw=2)
 b.plot(yr.year, yr.RR_median, "o", color=CAT[1], ms=5, mec="white", mew=0.6)
 b.set_yscale("log"); b.set_yticks([0.4, 0.6, 1, 1.5, 2]); b.set_yticklabels(["0.4", "0.6", "1", "1.5", "2"])
-b.set_ylabel("Year recording effect\n(RR at fixed heat, 95% CrI)")
+b.set_ylabel("Year recording effect\n(rate ratio, log scale)")
 b.yaxis.grid(True, color=GRID, lw=0.5); b.set_axisbelow(True)
 b.set_xticks(yr.year)
 b.text(0.0, 1.02, "b", transform=b.transAxes, fontweight="bold", fontsize=9)
@@ -136,5 +136,5 @@ for r in big.itertuples():
 ax.set_yscale("log"); ax.set_yticks([0.1, 0.2, 0.5, 1, 2, 5]); ax.set_yticklabels(["0.1", "0.2", "0.5", "1", "2", "5"])
 ax.set_xticks(xs); ax.set_xticklabels(["2014–17", "2018–21", "2022–24"]); ax.set_xlim(-0.1, 2.9)
 ax.yaxis.grid(True, color=GRID, lw=0.5); ax.set_axisbelow(True)
-ax.set_ylabel("Recording index by period (posterior median)")
+ax.set_ylabel("Recording index (log scale)")
 save(fig, "fig4_rotation")

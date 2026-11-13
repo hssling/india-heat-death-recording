@@ -67,7 +67,6 @@ sd = d[["dd40", "hn28"]].std()
 N["beta_RR_per_sd"] = {x: [round(float(np.exp(np.median(beta[:, i]))), 2), round(float(np.exp(np.quantile(beta[:, i], .025))), 2),
                            round(float(np.exp(np.quantile(beta[:, i], .975))), 2)] for i, x in enumerate(["dd40", "hn28"])}
 N["exposure_sd"] = {x: round(float(sd[x]), 1) for x in ("dd40", "hn28")}
-th = post["theta"]
 N["theta_outdoor"] = [round(float(np.median(th[:, 1])), 2), round(float(np.quantile(th[:, 1], .025)), 2), round(float(np.quantile(th[:, 1], .975)), 2)]
 N["theta_age60"] = [round(float(np.median(th[:, 0])), 2), round(float(np.quantile(th[:, 0], .025)), 2), round(float(np.quantile(th[:, 0], .975)), 2)]
 SI = pd.read_csv(O / "bayes_state_index.csv").set_index("unit")
@@ -134,6 +133,23 @@ N["lowest_recorders_ge10_deaths"] = sorted(low, key=low.get)[:5]
 N["nw_dd40"] = {u: round(float(d[d.unit == u].dd40.mean())) for u in ("PUNJAB", "HARYANA", "RAJASTHAN", "MADHYA PRADESH", "DELHI (UT)")}
 N["g2_null_exposures"] = [x for x in ("hot40", "hw", "hwspell", "shw", "wn", "hn28", "dd40", "tmax_dep", "tmin_dep")
                           if pd.read_csv(O / "exposure_test.csv").set_index("exposure").loc[x, "lo"] <= 1]
+
+# posterior credible intervals for the headline ratios (from the saved draws, not ratios of medians)
+units_post = [str(u) for u in post["units"]]
+years_post = [int(y) for y in post["years"]]
+al, gm, dl = post["alpha"], post["gamma"], post["delta"]
+def q3(x): return [round(float(np.median(x)), 2), round(float(np.quantile(x, .025)), 2), round(float(np.quantile(x, .975)), 2)]
+iu = units_post.index
+N["ratio_top_bottom_post"] = q3(np.exp(al[:, iu(N["top_state"])] - al[:, iu(N["bottom_state"])]))
+yi = years_post.index
+N["ratio_year_max_min_post"] = q3(np.exp(gm[:, yi(N["year_max"])] - gm[:, yi(N["year_min"])]))
+N["ratio_2024_vs_min_post"] = q3(np.exp(gm[:, yi(2024)] - gm[:, yi(N["year_min"])]))
+a = iu("ANDHRA PRADESH")
+ref = [iu(u) for u, v in N["index"].items() if v["deaths"] >= 50]
+r1 = al[:, a] + dl[:, a, 0] - (al[:, ref] + dl[:, ref, 0]).mean(1)
+r3 = al[:, a] + dl[:, a, 2] - (al[:, ref] + dl[:, ref, 2]).mean(1)
+N["ap_change_post"] = q3(np.exp(r3 - r1))
+N["sigma_alpha_fold"] = round(float(np.exp(N["sigma_alpha"][0])), 1)
 
 (O / "numbers.json").write_text(json.dumps(N, indent=1, default=str), encoding="utf-8")
 print("wrote", len(N), "top-level entries")
