@@ -67,6 +67,7 @@ sd = d[["dd40", "hn28"]].std()
 N["beta_RR_per_sd"] = {x: [round(float(np.exp(np.median(beta[:, i]))), 2), round(float(np.exp(np.quantile(beta[:, i], .025))), 2),
                            round(float(np.exp(np.quantile(beta[:, i], .975))), 2)] for i, x in enumerate(["dd40", "hn28"])}
 N["exposure_sd"] = {x: round(float(sd[x]), 1) for x in ("dd40", "hn28")}
+th = post["theta"]
 N["theta_outdoor"] = [round(float(np.median(th[:, 1])), 2), round(float(np.quantile(th[:, 1], .025)), 2), round(float(np.quantile(th[:, 1], .975)), 2)]
 N["theta_age60"] = [round(float(np.median(th[:, 0])), 2), round(float(np.quantile(th[:, 0], .025)), 2), round(float(np.quantile(th[:, 0], .975)), 2)]
 SI = pd.read_csv(O / "bayes_state_index.csv").set_index("unit")
