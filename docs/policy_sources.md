@@ -21,7 +21,7 @@
 | Jharkhand, Haryana | Not found (one search each) | — | — | — | ? | to search |
 
 **NCDC surveillance definition.** A confirmed heatstroke death requires several criteria together: ante-mortem core temperature, cooling attempted, altered mental status, no other diagnosis, and an environmental or heat-stress history. Anything else is "suspected". Reported via IHIP under NPCCHH.
-- [Checklist, Oct 2025](https://ncdc.mohfw.gov.in/wp-content/uploads/2025/10/Checklist_Criteria-to-Categorize-Heat-Stroke-or-HRI-Deaths-in-Clinical-Setting.pdf)
+- [Criteria to label heatstroke/heat-related deaths in clinical setting (heat8.pdf; PDF created 2 Jul 2024)](https://ncdc.mohfw.gov.in/uploads/pdf/heat8.pdf): read 2026-11-13, grade P. The Oct 2025 wp-content checklist URL returned 404.
 - [FAQ 2024](https://ncdc.mohfw.gov.in/wp-content/uploads/2024/07/FAQ-on-Heat-Related-Illness-Death-Surveillance_2024.pdf)
 
 The 2025 surveillance count reportedly had 14 confirmed deaths (1 Mar–24 Jun) against 7,192 suspected cases ([The Quint](https://www.thequint.com/climate-change/india-heatwave-heatstroke-deaths-mortality-data)), grade S.
@@ -50,3 +50,34 @@ The 2025 surveillance count reportedly had 14 confirmed deaths (1 Mar–24 Jun) 
 2. Rajya Sabha USQ 1036, 31 Jul 2024 (MHA): the ₹4 lakh and 10% SDRF state-specific disaster rule.
 3. AP G.O. adding sunstroke to Apathbandhu (2011) and G.O.Rt.No.205 of 24 Jul 2014.
 4. Telangana G.O. of Apr 2025.
+
+## Update 2026-11-13: external verification report checked
+
+Each claim in the external report was checked; the corrections that held were applied.
+
+**Now primary (documents read and saved in `data_raw/heat_deaths_parliament/`)**
+- **Rajya Sabha USQ 1036** (31 Jul 2024):
+  - 12 notified calamities;
+  - ≤10% SDRF for locally notified disasters;
+  - ₹4 lakh ex-gratia, including state-notified local heatwave disasters.
+  - Its Annexure-I (NCRB heat deaths by state, 2018–2022) matches our ADSI extraction cell for cell.
+- **Lok Sabha USQ 2541** (4 Aug 2026), "Declaring heatwaves as a natural disaster":
+  - heatwaves and lightning added to the notified calamities, SDRF/NDRF operational guidelines, 2026–31;
+  - no ex-gratia amount stated;
+  - NHRIDS 2026: 4,853 cases and 20 confirmed deaths to 26 Jul.
+  - Read from a PolicyIndex mirror of the Lok Sabha annex PDF; the official sansad.in link is still to add.
+
+**Corrected**
+- AP 2014: G.O.Rt.No.205 not located, so we cite Down To Earth (16 Jun 2014): ₹1 lakh ex-gratia announced by the Deputy CM.
+- AP Apathbandhu: Hans India (2 Jun 2017) confirms ₹50,000 under Apathbandhu, with certification by the assistant civil surgeon and a committee of the Tahsildar, civil surgeon and police station house officer. The "2011" start year (from a blog) is dropped.
+- Odisha: OdishaTV, 23 Apr 2016: ₹50,000 from SDRF; classified as state-specific. "After autopsy" is dropped (not in the cited source).
+- Telangana: URL corrected to the /telangana/ path; author Sumit Jha.
+- Technical Group report: cover dated November 2019, so cited as 2019.
+- PLFS: rounds specified (July 2017–June 2018 to July 2023–June 2024, plus calendar 2024).
+
+**Rejected**
+- Tobias 2026, 4th author "Alhamad": the publisher (Crossref) has Barrak Alahmad; the PubMed byline appears to be a typo, and the PubMed collaborator list has "Alahmad". Kept as Alahmad.
+
+**Still open**
+- ~~NCDC checklist URL~~: resolved. The author supplied https://ncdc.mohfw.gov.in/uploads/pdf/heat8.pdf; it was read and is cited as NCDC 2024 (status primary).
+- ~~Official sansad.in link for LS 2541~~: resolved. https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2541_Ql0SOe.pdf?source=lsapps (supplied by the author) is byte-identical (sha256 53a5e723…) to the mirror copy; now cited.
