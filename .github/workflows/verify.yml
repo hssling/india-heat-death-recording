@@ -1,0 +1,43 @@
+name: reproduce-and-verify
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Pre-specified tests from the shipped state-year tables
+        run: |
+          python src/02_exposure_test.py
+          python src/04_state_index.py
+          python src/06_humidity_gate.py
+      - name: Figures and reported numbers (from shipped posterior summaries)
+        run: |
+          python src/08_figures.py
+          python src/09_numbers.py
+      - name: Verify reported numbers
+        run: python verify.py
+  bayes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt -r requirements-bayes.txt
+      - name: Refit the main model and compare with the shipped posterior summaries
+        run: |
+          cp outputs/bayes_state_index.csv /tmp/shipped_index.csv
+          VARIANT=main python src/07_bayes_model.py
+          python - <<'PY'
+          import pandas as pd, numpy as np
+          a = pd.read_csv("/tmp/shipped_index.csv").set_index("unit"); b = pd.read_csv("outputs/bayes_state_index.csv").set_index("unit")
+          big = a[a.deaths >= 50].index
+          rel = (np.log(b.loc[big, "RI_median"]) - np.log(a.loc[big, "RI_median"])).abs()
+          print(rel.round(3).to_string()); assert rel.max() < 0.05, f"index differs by up to {rel.max():.3f} on the log scale"
+          PY

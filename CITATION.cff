@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "Exposure-adjusted recording of heat-stroke deaths across Indian states, 2014-2024: code and data"
+authors:
+  - family-names: "H S"
+    given-names: "Siddalingaiah"
+    orcid: "https://orcid.org/0000-0002-4771-8285"
+    affiliation: "Department of Community Medicine, Shridevi Institute of Medical Sciences and Research Hospital, Tumakuru, India"
+repository-code: "https://github.com/hssling/india-heat-death-recording"
+license: MIT
+version: "1.0.0"
+

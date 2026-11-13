@@ -1,0 +1,1045 @@
+{
+ "deaths_total": 12055,
+ "deaths_by_year": {
+  "2014": 1248,
+  "2015": 1908,
+  "2016": 1338,
+  "2017": 1127,
+  "2018": 890,
+  "2019": 1274,
+  "2020": 530,
+  "2021": 374,
+  "2022": 730,
+  "2023": 804,
+  "2024": 1832
+ },
+ "deaths_mean_per_year": 1096.0,
+ "units_modelled": 34,
+ "unit_years": 374,
+ "units_zero_deaths": 10,
+ "units_ge50": 14,
+ "share_deaths_14_states_pct": 99.2,
+ "g2_RRsd_dd40": [
+  1.3,
+  1.18,
+  1.44
+ ],
+ "g2_withinsd_dd40": 22.5,
+ "g2_RRsd_hot40": [
+  1.31,
+  1.15,
+  1.49
+ ],
+ "g2_withinsd_hot40": 10.1,
+ "g2_RRsd_hn28": [
+  1.2,
+  1.09,
+  1.31
+ ],
+ "g2_withinsd_hn28": 4.4,
+ "g2_RRsd_hw": [
+  1.15,
+  1.05,
+  1.25
+ ],
+ "g2_withinsd_hw": 2.4,
+ "g2_obs_pred_2024_best": 2.36,
+ "g2_obs_pred_2024_range": [
+  2.31,
+  2.88
+ ],
+ "loyo": {
+  "2014": 0.94,
+  "2015": 1.69,
+  "2016": 0.93,
+  "2017": 0.92,
+  "2018": 0.75,
+  "2019": 0.68,
+  "2020": 0.6,
+  "2021": 0.52,
+  "2022": 0.59,
+  "2023": 0.91,
+  "2024": 2.36
+ },
+ "g3_I0_heat_within_fold": 27.6,
+ "g3_I0_heat_within_sdlog": 1.09,
+ "g3_I1_plus_age_outdoor_fold": 16.5,
+ "g3_I1_plus_age_outdoor_sdlog": 0.98,
+ "g3_I2_relative_heat_fold": 13.7,
+ "g3_I2_relative_heat_sdlog": 0.93,
+ "g3_sd_kept_I1_pct": 90,
+ "g3_sd_kept_I2_pct": 85,
+ "g3_spline_obs_pred_range": [
+  2.2,
+  2.4
+ ],
+ "g4_sd_kept_pct": [
+  106,
+  92,
+  89
+ ],
+ "g4_AP_MP": [
+  47.8,
+  13.1,
+  11.1
+ ],
+ "g4_PB_MP": [
+  19.7,
+  17.4,
+  18.2
+ ],
+ "g4_obs_pred_2024_range": [
+  2.3,
+  2.8
+ ],
+ "diag": {
+  "max_rhat": 1.003,
+  "min_neff": 1505,
+  "divergences": 0
+ },
+ "sigma_alpha": [
+  2.12,
+  1.51,
+  2.63
+ ],
+ "sigma_delta": [
+  0.33,
+  0.2,
+  0.47
+ ],
+ "sigma_gamma": [
+  0.4,
+  0.21,
+  0.58
+ ],
+ "beta_RR_per_sd": {
+  "dd40": [
+   1.27,
+   1.05,
+   1.54
+  ],
+  "hn28": [
+   1.16,
+   0.98,
+   1.37
+  ]
+ },
+ "exposure_sd": {
+  "dd40": 33.5,
+  "hn28": 5.8
+ },
+ "theta_outdoor": [
+  0.72,
+  -0.03,
+  1.55
+ ],
+ "theta_age60": [
+  0.16,
+  -0.6,
+  0.92
+ ],
+ "index": {
+  "UTTARAKHAND": {
+   "ri": [
+    0.01,
+    0.0,
+    0.04
+   ],
+   "resid": [
+    0.01,
+    0.0,
+    0.06
+   ],
+   "periods": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "change": 1.05,
+   "p_decline": 0.458,
+   "p_top3": null,
+   "deaths": 0
+  },
+  "CHANDIGARH": {
+   "ri": [
+    0.01,
+    0.0,
+    0.15
+   ],
+   "resid": [
+    0.05,
+    0.0,
+    1.18
+   ],
+   "periods": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "change": 1.03,
+   "p_decline": 0.469,
+   "p_top3": null,
+   "deaths": 0
+  },
+  "MANIPUR": {
+   "ri": [
+    0.01,
+    0.0,
+    0.1
+   ],
+   "resid": [
+    0.02,
+    0.0,
+    0.25
+   ],
+   "periods": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "change": 1.05,
+   "p_decline": 0.455,
+   "p_top3": null,
+   "deaths": 0
+  },
+  "DNH & DD": {
+   "ri": [
+    0.01,
+    0.0,
+    0.19
+   ],
+   "resid": [
+    0.05,
+    0.0,
+    0.99
+   ],
+   "periods": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "change": 1.04,
+   "p_decline": 0.47,
+   "p_top3": null,
+   "deaths": 0
+  },
+  "GOA": {
+   "ri": [
+    0.01,
+    0.0,
+    0.16
+   ],
+   "resid": [
+    0.03,
+    0.0,
+    0.62
+   ],
+   "periods": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "change": 1.05,
+   "p_decline": 0.461,
+   "p_top3": null,
+   "deaths": 0
+  },
+  "NAGALAND": {
+   "ri": [
+    0.01,
+    0.0,
+    0.14
+   ],
+   "resid": [
+    0.02,
+    0.0,
+    0.33
+   ],
+   "periods": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "change": 1.05,
+   "p_decline": 0.46,
+   "p_top3": null,
+   "deaths": 0
+  },
+  "TAMIL NADU": {
+   "ri": [
+    0.01,
+    0.0,
+    0.03
+   ],
+   "resid": [
+    0.02,
+    0.0,
+    0.05
+   ],
+   "periods": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "change": 1.34,
+   "p_decline": 0.24,
+   "p_top3": null,
+   "deaths": 6
+  },
+  "PUDUCHERRY": {
+   "ri": [
+    0.01,
+    0.0,
+    0.16
+   ],
+   "resid": [
+    0.04,
+    0.0,
+    0.6
+   ],
+   "periods": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "change": 1.06,
+   "p_decline": 0.458,
+   "p_top3": null,
+   "deaths": 0
+  },
+  "ARUNACHAL PRADESH": {
+   "ri": [
+    0.02,
+    0.0,
+    0.2
+   ],
+   "resid": [
+    0.03,
+    0.0,
+    0.37
+   ],
+   "periods": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "change": 1.03,
+   "p_decline": 0.472,
+   "p_top3": null,
+   "deaths": 0
+  },
+  "MIZORAM": {
+   "ri": [
+    0.02,
+    0.0,
+    0.22
+   ],
+   "resid": [
+    0.03,
+    0.0,
+    0.33
+   ],
+   "periods": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "change": 1.04,
+   "p_decline": 0.463,
+   "p_top3": null,
+   "deaths": 0
+  },
+  "LAKSHADWEEP": {
+   "ri": [
+    0.03,
+    0.0,
+    0.97
+   ],
+   "resid": [
+    0.08,
+    0.0,
+    2.94
+   ],
+   "periods": [
+    0.02,
+    0.03,
+    0.03
+   ],
+   "change": 1.03,
+   "p_decline": 0.469,
+   "p_top3": null,
+   "deaths": 0
+  },
+  "DELHI (UT)": {
+   "ri": [
+    0.03,
+    0.01,
+    0.07
+   ],
+   "resid": [
+    0.2,
+    0.03,
+    1.79
+   ],
+   "periods": [
+    0.04,
+    0.03,
+    0.03
+   ],
+   "change": 0.7,
+   "p_decline": 0.813,
+   "p_top3": null,
+   "deaths": 12
+  },
+  "JAMMU & KASHMIR (incl. LADAKH)": {
+   "ri": [
+    0.04,
+    0.01,
+    0.1
+   ],
+   "resid": [
+    0.03,
+    0.01,
+    0.1
+   ],
+   "periods": [
+    0.04,
+    0.03,
+    0.04
+   ],
+   "change": 1.0,
+   "p_decline": 0.499,
+   "p_top3": null,
+   "deaths": 3
+  },
+  "HIMACHAL PRADESH": {
+   "ri": [
+    0.05,
+    0.01,
+    0.17
+   ],
+   "resid": [
+    0.01,
+    0.0,
+    0.09
+   ],
+   "periods": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "change": 0.99,
+   "p_decline": 0.51,
+   "p_top3": null,
+   "deaths": 2
+  },
+  "KERALA": {
+   "ri": [
+    0.05,
+    0.02,
+    0.11
+   ],
+   "resid": [
+    0.07,
+    0.01,
+    0.68
+   ],
+   "periods": [
+    0.05,
+    0.06,
+    0.05
+   ],
+   "change": 0.92,
+   "p_decline": 0.581,
+   "p_top3": null,
+   "deaths": 12
+  },
+  "KARNATAKA": {
+   "ri": [
+    0.06,
+    0.03,
+    0.12
+   ],
+   "resid": [
+    0.06,
+    0.03,
+    0.13
+   ],
+   "periods": [
+    0.07,
+    0.05,
+    0.06
+   ],
+   "change": 0.88,
+   "p_decline": 0.633,
+   "p_top3": null,
+   "deaths": 30
+  },
+  "ASSAM": {
+   "ri": [
+    0.07,
+    0.03,
+    0.14
+   ],
+   "resid": [
+    0.1,
+    0.04,
+    0.27
+   ],
+   "periods": [
+    0.06,
+    0.06,
+    0.08
+   ],
+   "change": 1.2,
+   "p_decline": 0.309,
+   "p_top3": null,
+   "deaths": 15
+  },
+  "SIKKIM": {
+   "ri": [
+    0.17,
+    0.01,
+    0.91
+   ],
+   "resid": [
+    0.13,
+    0.01,
+    0.7
+   ],
+   "periods": [
+    0.15,
+    0.18,
+    0.16
+   ],
+   "change": 1.06,
+   "p_decline": 0.45,
+   "p_top3": null,
+   "deaths": 1
+  },
+  "MADHYA PRADESH": {
+   "ri": [
+    0.21,
+    0.12,
+    0.36
+   ],
+   "resid": [
+    0.11,
+    0.04,
+    0.32
+   ],
+   "periods": [
+    0.21,
+    0.17,
+    0.23
+   ],
+   "change": 1.1,
+   "p_decline": 0.373,
+   "p_top3": 0.0,
+   "deaths": 254
+  },
+  "RAJASTHAN": {
+   "ri": [
+    0.24,
+    0.14,
+    0.41
+   ],
+   "resid": [
+    0.18,
+    0.1,
+    0.35
+   ],
+   "periods": [
+    0.27,
+    0.26,
+    0.17
+   ],
+   "change": 0.64,
+   "p_decline": 0.931,
+   "p_top3": 0.0,
+   "deaths": 383
+  },
+  "MEGHALAYA": {
+   "ri": [
+    0.26,
+    0.09,
+    0.67
+   ],
+   "resid": [
+    0.24,
+    0.04,
+    1.49
+   ],
+   "periods": [
+    0.24,
+    0.33,
+    0.23
+   ],
+   "change": 0.94,
+   "p_decline": 0.554,
+   "p_top3": null,
+   "deaths": 6
+  },
+  "CHHATTISGARH": {
+   "ri": [
+    0.32,
+    0.19,
+    0.54
+   ],
+   "resid": [
+    0.1,
+    0.02,
+    0.4
+   ],
+   "periods": [
+    0.23,
+    0.27,
+    0.5
+   ],
+   "change": 2.19,
+   "p_decline": 0.012,
+   "p_top3": 0.0,
+   "deaths": 112
+  },
+  "GUJARAT": {
+   "ri": [
+    0.37,
+    0.22,
+    0.62
+   ],
+   "resid": [
+    0.47,
+    0.26,
+    0.83
+   ],
+   "periods": [
+    0.47,
+    0.43,
+    0.26
+   ],
+   "change": 0.56,
+   "p_decline": 0.972,
+   "p_top3": 0.0,
+   "deaths": 259
+  },
+  "TRIPURA": {
+   "ri": [
+    0.43,
+    0.18,
+    0.97
+   ],
+   "resid": [
+    0.55,
+    0.22,
+    1.38
+   ],
+   "periods": [
+    0.39,
+    0.47,
+    0.43
+   ],
+   "change": 1.09,
+   "p_decline": 0.401,
+   "p_top3": null,
+   "deaths": 11
+  },
+  "WEST BENGAL": {
+   "ri": [
+    0.43,
+    0.26,
+    0.74
+   ],
+   "resid": [
+    0.57,
+    0.3,
+    1.11
+   ],
+   "periods": [
+    0.51,
+    0.51,
+    0.32
+   ],
+   "change": 0.64,
+   "p_decline": 0.936,
+   "p_top3": 0.0,
+   "deaths": 345
+  },
+  "UTTAR PRADESH": {
+   "ri": [
+    0.63,
+    0.39,
+    1.0
+   ],
+   "resid": [
+    0.83,
+    0.43,
+    1.59
+   ],
+   "periods": [
+    0.66,
+    0.59,
+    0.62
+   ],
+   "change": 0.93,
+   "p_decline": 0.599,
+   "p_top3": 0.0,
+   "deaths": 1804
+  },
+  "MAHARASHTRA": {
+   "ri": [
+    0.93,
+    0.58,
+    1.48
+   ],
+   "resid": [
+    0.88,
+    0.43,
+    1.78
+   ],
+   "periods": [
+    0.75,
+    1.1,
+    0.98
+   ],
+   "change": 1.31,
+   "p_decline": 0.161,
+   "p_top3": 0.0,
+   "deaths": 926
+  },
+  "HARYANA": {
+   "ri": [
+    1.48,
+    0.9,
+    2.42
+   ],
+   "resid": [
+    3.52,
+    1.28,
+    10.46
+   ],
+   "periods": [
+    1.33,
+    1.48,
+    1.67
+   ],
+   "change": 1.25,
+   "p_decline": 0.204,
+   "p_top3": 0.012,
+   "deaths": 581
+  },
+  "BIHAR": {
+   "ri": [
+    1.54,
+    0.96,
+    2.5
+   ],
+   "resid": [
+    3.04,
+    1.1,
+    8.98
+   ],
+   "periods": [
+    1.26,
+    1.61,
+    1.89
+   ],
+   "change": 1.5,
+   "p_decline": 0.067,
+   "p_top3": 0.011,
+   "deaths": 1418
+  },
+  "ODISHA": {
+   "ri": [
+    2.23,
+    1.36,
+    3.62
+   ],
+   "resid": [
+    1.64,
+    0.86,
+    3.07
+   ],
+   "periods": [
+    2.28,
+    1.92,
+    2.62
+   ],
+   "change": 1.15,
+   "p_decline": 0.306,
+   "p_top3": 0.157,
+   "deaths": 720
+  },
+  "JHARKHAND": {
+   "ri": [
+    2.54,
+    1.57,
+    4.09
+   ],
+   "resid": [
+    2.44,
+    1.38,
+    4.35
+   ],
+   "periods": [
+    2.19,
+    2.65,
+    2.9
+   ],
+   "change": 1.32,
+   "p_decline": 0.154,
+   "p_top3": 0.315,
+   "deaths": 711
+  },
+  "ANDHRA PRADESH": {
+   "ri": [
+    3.1,
+    1.88,
+    5.07
+   ],
+   "resid": [
+    1.92,
+    0.77,
+    4.73
+   ],
+   "periods": [
+    5.45,
+    2.69,
+    2.09
+   ],
+   "change": 0.38,
+   "p_decline": 0.998,
+   "p_top3": 0.697,
+   "deaths": 1888
+  },
+  "TELANGANA": {
+   "ri": [
+    3.45,
+    2.16,
+    5.56
+   ],
+   "resid": [
+    3.31,
+    2.02,
+    5.43
+   ],
+   "periods": [
+    3.52,
+    3.62,
+    3.35
+   ],
+   "change": 0.94,
+   "p_decline": 0.586,
+   "p_top3": 0.824,
+   "deaths": 1373
+  },
+  "PUNJAB": {
+   "ri": [
+    4.89,
+    2.99,
+    7.87
+   ],
+   "resid": [
+    9.1,
+    3.42,
+    25.69
+   ],
+   "periods": [
+    4.18,
+    5.08,
+    5.91
+   ],
+   "change": 1.4,
+   "p_decline": 0.102,
+   "p_top3": 0.984,
+   "deaths": 1183
+  }
+ },
+ "fold_top_bottom": 23.7,
+ "top_state": "PUNJAB",
+ "bottom_state": "MADHYA PRADESH",
+ "resid_fold": 89.5,
+ "year_RR": {
+  "2014": [
+   1.47,
+   1.15,
+   1.91
+  ],
+  "2015": [
+   1.27,
+   1.0,
+   1.63
+  ],
+  "2016": [
+   1.35,
+   1.05,
+   1.74
+  ],
+  "2017": [
+   1.07,
+   0.83,
+   1.37
+  ],
+  "2018": [
+   0.99,
+   0.77,
+   1.27
+  ],
+  "2019": [
+   1.21,
+   0.94,
+   1.57
+  ],
+  "2020": [
+   0.67,
+   0.5,
+   0.89
+  ],
+  "2021": [
+   0.54,
+   0.4,
+   0.75
+  ],
+  "2022": [
+   0.74,
+   0.56,
+   0.95
+  ],
+  "2023": [
+   0.88,
+   0.67,
+   1.15
+  ],
+  "2024": [
+   1.32,
+   1.0,
+   1.74
+  ]
+ },
+ "year_swing": 2.7,
+ "ppc_years_covered": 11,
+ "ppc_zero_obs": 0.481,
+ "ppc_zero_rep": 0.452,
+ "sensitivity": {
+  "negbin": {
+   "fold": 24.6,
+   "rank_corr": 0.996,
+   "AP_change": 0.34,
+   "AP_p_decline": 1.0,
+   "max_rhat": 1.004,
+   "divergences": 0
+  },
+  "nocovid": {
+   "fold": 16.9,
+   "rank_corr": 0.991,
+   "AP_change": 0.35,
+   "AP_p_decline": 0.999,
+   "max_rhat": 1.003,
+   "divergences": 0
+  },
+  "hwdays": {
+   "fold": 17.5,
+   "rank_corr": 0.982,
+   "AP_change": 0.39,
+   "AP_p_decline": 0.998,
+   "max_rhat": 1.002,
+   "divergences": 0
+  },
+  "nomundlak": {
+   "fold": 25.3,
+   "rank_corr": 1.0,
+   "AP_change": 0.39,
+   "AP_p_decline": 0.997,
+   "max_rhat": 1.003,
+   "divergences": 0
+  }
+ },
+ "mds": {
+  "extreme_hot_2015": 25100,
+  "lo": 15400,
+  "hi": 33200,
+  "all_hot_2015": 88700
+ },
+ "ncrb_share_of_mds_2015_pct": [
+  7.6,
+  5.7,
+  12.4
+ ],
+ "ncrb_share_of_mds_mean_pct": [
+  4.4,
+  3.3,
+  7.1
+ ],
+ "ncdc": [
+  {
+   "year": 2021,
+   "ncdc_suspected_heatstroke_cases": 65,
+   "ncdc_confirmed_heatstroke_deaths": NaN,
+   "ncdc_window": "Mar 1-Jul 31",
+   "adsi_heatstroke_deaths_calendar_year": 374,
+   "source": "Rajya Sabha USQ 1693 (06.08.2024), MoHFW, Annexure-I: National Heat-Related Illness and Death Surveillance, NPCCHH; '-' printed for 2021 deaths"
+  },
+  {
+   "year": 2022,
+   "ncdc_suspected_heatstroke_cases": 4481,
+   "ncdc_confirmed_heatstroke_deaths": 33.0,
+   "ncdc_window": "Mar 1-Jul 31",
+   "adsi_heatstroke_deaths_calendar_year": 730,
+   "source": "same"
+  },
+  {
+   "year": 2023,
+   "ncdc_suspected_heatstroke_cases": 19402,
+   "ncdc_confirmed_heatstroke_deaths": 189.0,
+   "ncdc_window": "Mar 1-Jul 31",
+   "adsi_heatstroke_deaths_calendar_year": 804,
+   "source": "same"
+  },
+  {
+   "year": 2024,
+   "ncdc_suspected_heatstroke_cases": 48385,
+   "ncdc_confirmed_heatstroke_deaths": 185.0,
+   "ncdc_window": "Mar 1-Jul 28",
+   "adsi_heatstroke_deaths_calendar_year": 1832,
+   "source": "same (partial season, till 28 Jul 2024)"
+  }
+ ],
+ "units_ge20": 15,
+ "excess24_top5": [
+  "BIHAR",
+  "UTTAR PRADESH",
+  "PUNJAB",
+  "JHARKHAND",
+  "ODISHA"
+ ],
+ "excess24_top5_share_pct": 76.0,
+ "excess24_shortfall": "ANDHRA PRADESH",
+ "excess24_shortfall_n": [
+  50,
+  137
+ ],
+ "hn28_2024_is_max": true,
+ "dd40_2024_rank": 3,
+ "delhi_dd40_rank": 3,
+ "delhi_dd40_mean": 79,
+ "year_max": 2014,
+ "year_min": 2021,
+ "top_state_2014_17": "ANDHRA PRADESH",
+ "lowest_recorders_ge10_deaths": [
+  "DELHI (UT)",
+  "KERALA",
+  "KARNATAKA",
+  "ASSAM",
+  "MADHYA PRADESH"
+ ],
+ "nw_dd40": {
+  "PUNJAB": 40,
+  "HARYANA": 71,
+  "RAJASTHAN": 94,
+  "MADHYA PRADESH": 94,
+  "DELHI (UT)": 79
+ },
+ "g2_null_exposures": [
+  "wn",
+  "tmin_dep"
+ ]
+}
